@@ -31,7 +31,9 @@ public:
                 cout << current << " ";
                 visited[current] = true;
 
-                for (int neighbor : adj[current]) {
+                // for (int neighbor : adj[current]) {
+                for (std::vector<int>::iterator it = adj[current].begin(); it!= adj[current].end(); ++it) {
+                    int neighbor = *it;
                     if (!visited[neighbor]) {
                         stk.push(neighbor);
                     }

@@ -28,7 +28,9 @@ public:
             int current = q.front();
             q.pop();
             cout << current << " ";
-            for (int neighbor : adj[current]) {
+            // for (int neighbor : adj[current]) {
+            for (std::vector<int>::iterator it = adj[current].begin(); it!= adj[current].end(); ++it) {
+                int neighbor = *it;
                 if (visited.find(neighbor) == visited.end()) {
                     q.push(neighbor);
                     visited.insert(neighbor);

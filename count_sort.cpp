@@ -10,7 +10,8 @@ void countSort(int arr[], int size) {
     }
 
     int n = maxElement + 1;
-    int countArr[n] = {0};
+    int countArr[n];
+    // int countArr[n] = {0};
 
     for (int i = 0; i < n; i++) {
         countArr[i] = 0;

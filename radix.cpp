@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+#include <vector> // Add this line to include the vector header
 #include <algorithm>
 using namespace std;
 
@@ -50,14 +50,22 @@ void printArray(vector<int>& arr) {
 }
 
 int main() {
-    vector<int> arr = {170, 45, 75, 90, 802, 24, 2, 66};
+    vector<int> arr;
+    arr.push_back(170);
+    arr.push_back(45);
+    arr.push_back(75);
+    arr.push_back(90);
+    arr.push_back(802);
+    arr.push_back(24);
+    arr.push_back(2);
+    arr.push_back(66);
 
-    cout << "Original array: ";
+    std::cout << "Original array: ";
     printArray(arr);
 
     radixSort(arr);
 
-    cout << "Sorted array: ";
+    std::cout << "Sorted array: ";
     printArray(arr);
 
     return 0;
